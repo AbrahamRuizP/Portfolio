@@ -4,6 +4,7 @@ import { SiTypescript, SiSpringboot, SiPostgresql, SiHtml5, SiCss } from "react-
 
 export const skillIcons: Record<string, React.ReactNode> = {
   React: <FaReact />,
+  FileMaker: <FaLayerGroup />,
   Hilla: <FaLayerGroup />,
   Java: <FaJava />,
   Docker: <FaDocker />,

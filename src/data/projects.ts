@@ -21,7 +21,7 @@ export const projects = [
   {
     title: "TLM",
     description: "Backend system implementing secure authentication and authorization using JWT and Spring Security.",
-    tech: ["Java", "Spring Boot", "Spring Security", "JWT", "JPA", "PostgreSQL/MySQL"],
+    tech: ["Java", "Spring Boot", "Spring Security", "JWT", "JPA", "SQL"],
     link: "https://github.com/AbrahamRuizP/TLM"
   },
 ];
