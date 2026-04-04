@@ -1,9 +1,9 @@
 // skills.ts
 export const skills = [
-    {category: "Frontend", items: ["React", "HTML", "CSS", "Hilla"]},
+    {category: "Frontend", items: ["React", "Hilla"]},
     {category: "Backend", items: ["Java", "Spring Boot"]},
-    {category: "Databases", items: ["SQL (PostgreSQL, MySQL"]},
+    {category: "Databases", items: ["SQL"]},
     {category: "Tools", items: ["Git", "Docker"]},
-    {category: "Other", items: ["FileMaker, XML"]},
+    {category: "Other", items: ["FileMaker"]},
     {category: "Language", items: ["English (B2/C1)", "Spanish (Native)"]}
 ];
