@@ -2,7 +2,7 @@
 import { projects } from '../data/projects';
 
 const Projects = () => (
-  <section className="py-5 bg-light">
+  <section id="projects" className="py-5 bg-light">
     <div className="container">
       <h2 className="fw-bold mb-4 text-center">Projects</h2>
       <div className="row g-4">
