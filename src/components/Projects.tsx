@@ -26,7 +26,7 @@ const Projects = () => (
                   className="badge rounded-pill bg-dark px-3 py-2 d-flex align-items-center gap-2"
                   style={{ fontSize: '0.7rem' }}
                 >
-                  {skillIcons[tech] && <span>{skillIcons[tech]}</span>}
+                  {skillIcons[tech] && skillIcons[tech]}
                   {tech}
                 </span>
                 ))}
