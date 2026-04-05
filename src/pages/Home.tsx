@@ -5,6 +5,7 @@ import SoftSkills from "../components/SoftSkills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import Contact from "../components/Contact";
 
 const Home = () => (
     <>
@@ -14,6 +15,7 @@ const Home = () => (
         <Skills />
         <SoftSkills />
         <Projects />
+        <Contact />
         <Footer />
     </>
 )

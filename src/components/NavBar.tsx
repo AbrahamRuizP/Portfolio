@@ -20,8 +20,8 @@ const NavBar = () => {
         <a href="#projects" onClick={() => handleActiveState(elementNames[1])} className={`btn btn-sm ${active == elementNames[1] ? "text-dark bg-light fw-bold" : "text-light bg-transparent"}`}>
           Projects
         </a>
-        <a href="#footer" onClick={() => handleActiveState(elementNames[2])} className={`btn btn-sm ${active == elementNames[2] ? "text-dark bg-light fw-bold" : "text-light bg-transparent"}`}>
-          Contact
+        <a href="#contact" onClick={() => handleActiveState(elementNames[2])} className={`btn btn-sm ${active == elementNames[2] ? "text-dark bg-light fw-bold" : "text-light bg-transparent"}`}>
+          Contact Me
         </a>
         </div>
     </section>

@@ -180,3 +180,31 @@ code {
 .project-link:hover .arrow {
   transform: translateX(4px);
 }
+
+.project-link:hover .icon {
+  transform: translateY(-2.5px);
+}
+
+.icon {
+  transition: all 0.2s ease;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border-radius: 0.375rem;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.form-input::placeholder {
+  color: #f7f8fa;
+  opacity: 65%;
+}
