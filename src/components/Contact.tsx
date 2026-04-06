@@ -1,6 +1,6 @@
 // Contact.tsx
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 
@@ -17,15 +17,26 @@ const Contact = () => {
         email: "",
         message: ""
     });
+    const limits: Record<string, number> = {
+        name: 20,
+        email: 50,
+        message: 100
+    }
     const [isSubmitting, setSubmitting] = useState(false);
     const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
     const handleFormDataChanges = (ev: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = ev.target;
+        let { name, value } = ev.target;
+        const limit = limits[name];
+        if (limit) value = truncateOver(value, limits[name]);
 
         setFormData((prev) => ({
             ...prev, [name]: value
         }));
+    }
+
+    const truncateOver = (word: string, position: number): string => {
+        return word.slice(0, position);
     }
 
     const onSubmit = async (ev: React.FormEvent) => {
@@ -33,6 +44,11 @@ const Contact = () => {
 
         setSubmitting(true);
         setStatus("idle");
+
+        if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+            setStatus("error");
+            return;
+        }
 
         try {
 
@@ -58,6 +74,14 @@ const Contact = () => {
         } finally {
             setSubmitting(false);
         }
+
+        useEffect(() => {
+            if (status === "success" || status === "error") {
+                const timer = setTimeout(() => setStatus("idle"), 3000);
+                return () => clearTimeout(timer);
+            }
+
+        }, [status]);
     }
 
     return (
@@ -90,22 +114,18 @@ const Contact = () => {
 
                             <div className="">
                                 <button type="submit" className="btn btn-light submit-btn" disabled={isSubmitting}>
-                                    {
-                                    (status === "idle" || status === "error") 
-                                    ? "Submit" 
-                                    : "Sending..."
-                                    }
+                                    {isSubmitting ? "Sending..." : "Submit"}
                                 </button>
                                 {
                                     status === "success" && (
-                                        <p className="status-message text-success mt-3 small">
+                                        <p aria-live="polite" className="status-message text-success mt-3 small">
                                             Message sent successfully.
                                         </p>
                                     )
                                 }
                                 {
                                     status === "error" && (
-                                        <p className="status-message text-danger mt-3 small">
+                                        <p aria-live="polite" className="status-message text-danger mt-3 small">
                                             Something went wrong. Try again.
                                         </p>
                                     )
