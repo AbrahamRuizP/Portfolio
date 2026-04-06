@@ -191,7 +191,7 @@ code {
 
 .form-input {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: transparent;
   border-radius: 0.375rem;
   color: #fff;
@@ -220,4 +220,15 @@ code {
 
 .submit-btn:active {
   transform: scale(0.97);
+}
+
+.status-message {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
