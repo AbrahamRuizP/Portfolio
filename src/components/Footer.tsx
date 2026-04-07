@@ -8,7 +8,12 @@ const Footer = () => (
             <a href="https://github.com/AbrahamRuizP" target="_blank" rel="noopener noreferrer" className="px-1 py-1 d-flex text-decoration-none text-light justify-content-center align-items-center project-link gap-1">
                 <span className="icon">{skillIcons["GitHub"]}</span>
             </a>
-            <a href="https://linkedin.com/in/abrahamruizp" target="_blank" rel="noopener noreferrer" className="px-1 py-1 d-flex text-decoration-none text-light justify-content-center project-link gap-1">
+            <a 
+            href="https://linkedin.com/in/abraham-ruiz-pestana" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="px-1 py-1 d-flex text-decoration-none text-light justify-content-center project-link gap-1"
+            >
                 <span className="icon">{skillIcons["LinkedIn"]}</span>
             </a>
         </div>

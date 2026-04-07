@@ -17,7 +17,11 @@ const Header = () => (
         <TypingText text = "Java/SpringBoot and React " highlight="developer" speed={70}/>
       </h4>
       <div className="d-flex justify-content-center gap-3 text-light">
-        <a href="https://github.com/AbrahamRuizP" className="btn btn-primary btn-sm text-ligth">
+        <a 
+        href="https://github.com/AbrahamRuizP"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-primary btn-sm text-ligth">
           GitHub
         </a>
         <a 

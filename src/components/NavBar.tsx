@@ -21,7 +21,7 @@ const NavBar = () => {
           Projects
         </a>
         <a href="#contact" onClick={() => handleActiveState(elementNames[2])} className={`btn btn-sm ${active == elementNames[2] ? "text-dark bg-light fw-bold" : "text-light bg-transparent"}`}>
-          Contact Me
+          Contact
         </a>
         </div>
     </section>

@@ -32,7 +32,12 @@ const Projects = () => (
                 ))}
               </div>
               <div className="mt-2">
-                <a href={p.link} className='text-decoration-none d-inline-flex align-items-center gap-1 project-link text-light'>
+                <a 
+                href={p.link} 
+                target="_blank"
+                rel='noopener noreferrer'
+                className='text-decoration-none d-inline-flex align-items-center gap-1 project-link text-light'
+                >
                   View Project
                   <span className='arrow'>→</span>
                 </a>
