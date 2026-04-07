@@ -17,13 +17,13 @@ const Header = () => (
         <TypingText text = "Java/SpringBoot and React " highlight="developer" speed={70}/>
       </h4>
       <div className="d-flex justify-content-center gap-3 text-light">
-        <a href="mailto:habramruizpestana@gmail.com" className="btn btn-primary btn-sm text-ligth">
-          Contact Me
-        </a>
-        <a href="https://github.com/AbrahamRuizP" className="btn btn-dark btn-sm text-ligth">
+        <a href="https://github.com/AbrahamRuizP" className="btn btn-primary btn-sm text-ligth">
           GitHub
         </a>
-        <a href="#" className="btn btn-secondary btn-sm text-light">
+        <a 
+        href="/cv.pdf"
+        download={"Abraham_Ruiz_CV.pdf"}
+        className="btn btn-secondary btn-sm text-light">
           Download CV
         </a>
       </div>
