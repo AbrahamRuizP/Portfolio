@@ -1,7 +1,9 @@
+/* index.css */
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #000;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -64,6 +66,7 @@
 
 body {
   margin: 0;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
 }
 
 h1,
@@ -210,7 +213,7 @@ code {
 }
 
 .submit-btn {
-  transition: transition 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .submit-btn:hover {
