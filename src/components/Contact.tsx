@@ -25,10 +25,19 @@ const Contact = () => {
     const [isSubmitting, setSubmitting] = useState(false);
     const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
+    // To messages showing time
+    useEffect(() => {
+        if (status === "success" || status === "error") {
+            const timer = setTimeout(() => setStatus("idle"), 3000);
+            return () => clearTimeout(timer);
+        }
+
+    }, [status]);
+
     const handleFormDataChanges = (ev: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         let { name, value } = ev.target;
         const limit = limits[name];
-        if (limit) value = truncateOver(value, limits[name]);
+        if (limit) value = truncateOver(value, limit);
 
         setFormData((prev) => ({
             ...prev, [name]: value
@@ -47,16 +56,17 @@ const Contact = () => {
 
         if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
             setStatus("error");
+            setSubmitting(false);
             return;
         }
 
         try {
 
             await emailjs.send(
-                "service_8r6ibh4",
-                "template_k0yr46w",
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 formData,
-                "shqad3d0Bz27LKUZd"
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
 
             // sending email
@@ -74,14 +84,6 @@ const Contact = () => {
         } finally {
             setSubmitting(false);
         }
-
-        useEffect(() => {
-            if (status === "success" || status === "error") {
-                const timer = setTimeout(() => setStatus("idle"), 3000);
-                return () => clearTimeout(timer);
-            }
-
-        }, [status]);
     }
 
     return (
@@ -136,8 +138,6 @@ const Contact = () => {
 
                     </div>
                 </div>
-
-
 
             </div>
         </section>
