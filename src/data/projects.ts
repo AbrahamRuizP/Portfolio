@@ -10,13 +10,13 @@ export const projects = [
     title: "SimpleBizz",
     description: "Business management web application for handling operations, scheduling, and payments.",
     tech: ["Hilla", "Vaadin", "Java", "SQL"],
-    link: "https://simplebizz.app"
+    link: "https://www.simplebiz.app/"
   },
   {
     title: "CRM System",
     description: "Comprehensive CRM system built in FileMaker to manage end-to-end business operations.",
     tech: ["FileMaker"],
-    link: "#"
+    link: "https://abaxconsultingfm.com/crm.html"
   },
   {
     title: "TLM",
