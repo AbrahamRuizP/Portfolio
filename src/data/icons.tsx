@@ -1,7 +1,7 @@
 // icons.tsx
 import { FaReact, FaJava, FaDocker, FaGitAlt, FaDatabase, FaLayerGroup, FaKey, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiTypescript, SiSpringboot, SiPostgresql, SiHtml5, SiCss } from "react-icons/si";
-import { JpaIcon } from "./jpaIcon";
+import { JpaIcon } from "./JpaIcon";
 import { ClarisIcon } from "./ClarisIcon";
 import { VaadinIcon } from "./VaadinIcon";
 
