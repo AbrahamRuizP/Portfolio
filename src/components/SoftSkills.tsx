@@ -1,10 +1,11 @@
 // SoftSkills.tsx
 import { softSkills } from "../data/softSkills";
+import { TitleTag } from "./TitleTag";
 
 const SoftSkills = () => (
   <section className="py-5 bg-black bg-dots text-light">
     <div className="container">
-      <h2 className="fw-bold mb-5 text-center">Soft Skills</h2>
+      <TitleTag title="Soft Skills" />
 
       <div className="row justify-content-center">
         {softSkills.map((skill) => (

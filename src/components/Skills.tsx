@@ -1,11 +1,12 @@
 // Skills.tsx
 import { skills } from '../data/skills';
 import { skillIcons } from '../data/icons';
+import { TitleTag } from './TitleTag';
 
 const Skills = () => (
   <section className="py-5 bg-black bg-dots text-light">
     <div className="container">
-      <h2 className="fw-bold mb-5 text-center">Skills</h2>
+      <TitleTag title='Skills' />
 
       <div className="row justify-content-center">
         {skills.map((s) => {

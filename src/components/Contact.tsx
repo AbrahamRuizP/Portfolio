@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import { motion } from "framer-motion";
+import { TitleTag } from "./TitleTag";
 
 const Contact = () => {
 
@@ -89,9 +90,17 @@ const Contact = () => {
     return (
         <section id="contact" className="py-5 bg-black bg-dots text-light">
             <div className="container">
-                <h2 className="fw-bold mb-4 text-center">Contact Me</h2>
+                <TitleTag title={"Contact Me"} />
 
-                <div className="row justify-content-center">
+                <motion.div
+                    className="row justify-content-center"
+
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+
+                    viewport={{ once: true }}
+                >
                     <div className="col-md-8">
 
                         <form onSubmit={onSubmit} className="">
@@ -137,7 +146,7 @@ const Contact = () => {
                         </form>
 
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </section>
