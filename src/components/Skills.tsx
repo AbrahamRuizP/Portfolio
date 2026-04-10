@@ -12,12 +12,17 @@ const Skills = () => (
         {skills.map((s) => {
 
           return (
-            <SkillCard
-              category={s.category}
-              items={s.items}
-            />
+            <div key={s.category} className="col-md-6 col-lg-4 mb-4">
+
+              <SkillCard
+                category={s.category}
+                items={s.items}
+              />
+              
+            </div>
+
           );
-          
+
         })}
       </div>
 

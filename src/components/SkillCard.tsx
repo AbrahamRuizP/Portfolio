@@ -21,37 +21,33 @@ export const SkillCard = ({ category, items }: Props) => {
         viewport: { once: true }
     }
 
+    // SkillCard
     return (
-        <div key={category} className="col-md-6 col-lg-4 mb-4">
+        <div className="p-4 bg-black rounded shadow-sm h-100 text-center skill-card" style={{ border: "1px solid rgba(255, 255, 255, 0.3" }}>
 
-            {/* Skill Card */}
-            <div className="p-4 bg-black rounded shadow-sm h-100 text-center skill-card" style={{ border: "1px solid rgba(255, 255, 255, 0.3" }}>
+            {/* Wrapper */}
+            <motion.div className="w-100 h-100" {...revealWrapper}>
 
-                {/* Wrapper */}
-                <motion.div className="w-100 h-100" {...revealWrapper}>
+                {/* Title */}
+                <motion.h5 className="fw-semibold mb-3" {...reveal}>
+                    {category}
+                </motion.h5>
 
-                    {/* Title */}
-                    <motion.h5 className="fw-semibold mb-3" {...reveal}>
-                        {category}
-                    </motion.h5>
+                {/* Items by Title */}
+                <div className="d-flex flex-wrap justify-content-center gap-2">
+                    {items.map((item) => (
+                        <span
+                            key={item}
+                            className={`badge rounded-pill bg-black px-3 py-2 d-flex align-items-center gap-2`}
+                            style={{ fontSize: '1rem' }}
+                        >
+                            {skillIcons[item] && <span>{skillIcons[item]}</span>}
+                            {item}
+                        </span>
+                    ))}
+                </div>
 
-                    {/* Items by Title */}
-                    <div className="d-flex flex-wrap justify-content-center gap-2">
-                        {items.map((item) => (
-                            <span
-                                key={item}
-                                className={`badge rounded-pill bg-black px-3 py-2 d-flex align-items-center gap-2`}
-                                style={{ fontSize: '1rem' }}
-                            >
-                                {skillIcons[item] && <span>{skillIcons[item]}</span>}
-                                {item}
-                            </span>
-                        ))}
-                    </div>
-
-                </motion.div>
-
-            </div>
+            </motion.div>
 
         </div>
     );
