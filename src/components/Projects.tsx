@@ -8,30 +8,37 @@ const Projects = () => (
   <section id="projects" className="py-5 bg-black bg-dots text-light">
     <div className="container">
       <TitleTag title="Projects" />
-      
-      {projects.map((p, index) => (
 
-        <motion.div
-          key={p.title}
-          className="row g-4 align-items-start project-row"
+      {projects.map((p) => (
 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-
-          viewport={{ once: true }}
-        >
+        <div key={p.title} className="row g-4 align-items-start project-row py-3">
 
           {/* Left Column */}
-          <div className="col-md-4 fw-bold fs-5">
+          <motion.div
+            className="col-md-4 fw-bold fs-5"
+
+            initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             {p.title}
-          </div>
+          </motion.div>
 
           {/* Right Column */}
           <div className='col-md-8 d-flex flex-column gap-3'>
-            <div className="mb-2">
+
+            <motion.div
+              className="mb-2"
+
+              initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               {p.description}
-            </div>
+            </motion.div>
+
             <div className='d-flex flex-wrap gap-2 justify-content-center'>
               {p.tech.map((tech) => (
                 <span
@@ -44,7 +51,14 @@ const Projects = () => (
                 </span>
               ))}
             </div>
-            <div className="mt-2">
+            <motion.div
+              className="mt-2"
+
+              initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <a
                 href={p.link}
                 target="_blank"
@@ -54,9 +68,10 @@ const Projects = () => (
                 View Project
                 <span className='arrow'>→</span>
               </a>
-            </div>
+            </motion.div>
           </div>
-        </motion.div>
+
+        </div>
 
       ))}
     </div>
