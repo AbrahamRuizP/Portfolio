@@ -1,5 +1,6 @@
 // SoftSkills.tsx
 import { softSkills } from "../data/softSkills";
+import { SoftSkillQuote } from "./SoftSkillQuote";
 import { TitleTag } from "./TitleTag";
 
 const SoftSkills = () => (
@@ -7,23 +8,20 @@ const SoftSkills = () => (
     <div className="container">
       <TitleTag title="Soft Skills" />
 
-      <div className="row justify-content-center">
-        {softSkills.map((skill) => (
-          <div key={skill.text} className="col-md-6 col-lg-3 mb-4">
-            <div className="p-4 rounded text-center h-100 soft-card bg-black" style={{border: "1px solid rgba(255, 255, 255, 0.3)"}}>
-              
-              <div className="mb-3 fs-3 text-light">
-                {skill.icon}
-              </div>
+      <div className="d-flex flex-column align-items-center">
+        {softSkills.map((s) => {
+          return (
 
-              <p className="mb-0 fw-medium fs-5">
-                {skill.text}
-              </p>
+            <div key={s.title} className="col-md-8 offset-md-2 col-lg-6 mx-auto mb-5">
+
+              <SoftSkillQuote title={s.title} quote={s.quote} />
 
             </div>
-          </div>
-        ))}
+
+          );
+        })}
       </div>
+
     </div>
   </section>
 );
