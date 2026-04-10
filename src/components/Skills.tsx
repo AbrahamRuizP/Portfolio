@@ -2,13 +2,14 @@
 import { skills } from '../data/skills';
 import { skillIcons } from '../data/icons';
 import { TitleTag } from './TitleTag';
+import { motion } from 'framer-motion';
 
 const Skills = () => (
   <section className="py-5 bg-black bg-dots text-light">
     <div className="container">
       <TitleTag title='Skills' />
 
-      <div className="row justify-content-center">
+      <motion.div className="row justify-content-center">
         {skills.map((s) => {
           const color = "dark";
 
@@ -39,7 +40,8 @@ const Skills = () => (
             </div>
           );
         })}
-      </div>
+      </motion.div>
+      
     </div>
   </section>
 );

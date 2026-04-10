@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { rotatingPhrases } from "../data/rotatingPhrases";
+import { motion } from "framer-motion";
 
 type Props = {
     speed?: number
@@ -34,12 +35,16 @@ const Rotate = ({speed = 2000} : Props) => {
     }, [index, speed]);
 
     return (
-        <p
+        <motion.p
           className={`transition-opacity ${isFading ? "opacity-0" : "opacity-100"} lead`}
           style={{ transition: `opacity ${fadeDuration}ms ease` }}
+
+          initial={{opacity: 0, y: 30}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
         >
           {rotatingPhrases[index]}
-        </p>
+        </motion.p>
       );
 }
 

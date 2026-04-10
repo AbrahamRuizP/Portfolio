@@ -92,38 +92,59 @@ const Contact = () => {
             <div className="container">
                 <TitleTag title={"Contact Me"} />
 
-                <motion.div
+                <div
                     className="row justify-content-center"
-
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-
-                    viewport={{ once: true }}
                 >
                     <div className="col-md-8">
 
                         <form onSubmit={onSubmit} className="">
                             {/* Name Column */}
-                            <div className="mb-3 text-start">
+                            <motion.div
+                                className="mb-3 text-start"
+
+                                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+                                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                transition={{ duration: 0.9, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            >
                                 <label htmlFor="name" className="form-label">Name</label>
                                 <input name="name" id="name" type="text" className="form-input" placeholder="Type your name here" value={formData.name} onChange={(ev) => handleFormDataChanges(ev)} />
-                            </div>
+                            </motion.div>
 
                             {/* Email Column */}
-                            <div className="mb-3 text-start">
+                            <motion.div
+                                className="mb-3 text-start"
+
+                                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+                                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                transition={{ duration: 0.9, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            >
                                 <label htmlFor="email" className="form-label">Email</label>
                                 <input name="email" id="email" type="email" className="form-input" placeholder="name@example.com" required value={formData.email} onChange={ev => handleFormDataChanges(ev)} />
-                            </div>
+                            </motion.div>
 
                             {/* Message Column */}
-                            <div className="mb-3 text-start">
+                            <motion.div
+                                className="mb-3 text-start"
+
+                                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+                                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                transition={{ duration: 0.9, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            >
                                 <label htmlFor="message" className="form-label">Message</label>
                                 <textarea name="message" id="message" className="form-input" rows={5} placeholder="Type your message here" required value={formData.message} onChange={ev => handleFormDataChanges(ev)}></textarea>
 
-                            </div>
+                            </motion.div>
 
-                            <div className="">
+                            <motion.div
+
+                                initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+                                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                transition={{ duration: 0.9, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            >
                                 <button type="submit" className="btn btn-light submit-btn" disabled={isSubmitting}>
                                     {isSubmitting ? "Sending..." : "Submit"}
                                 </button>
@@ -141,12 +162,12 @@ const Contact = () => {
                                         </p>
                                     )
                                 }
-                            </div>
+                            </motion.div>
 
                         </form>
 
                     </div>
-                </motion.div>
+                </div>
 
             </div>
         </section>
