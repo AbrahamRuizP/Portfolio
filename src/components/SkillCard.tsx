@@ -23,7 +23,7 @@ export const SkillCard = ({ category, items }: Props) => {
 
     // SkillCard
     return (
-        <div className="p-4 bg-black rounded shadow-sm h-100 text-center skill-card" style={{ border: "1px solid rgba(255, 255, 255, 0.3" }}>
+        <div className="p-4 shadow-sm h-100 text-center skill-card">
 
             {/* Wrapper */}
             <motion.div className="w-100 h-100" {...revealWrapper}>
