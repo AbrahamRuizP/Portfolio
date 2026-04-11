@@ -6,12 +6,14 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import Contact from "../components/Contact";
+import { Experience } from "../components/Experience";
 
 const Home = () => (
     <>
         <NavBar />
         <Header />
         <About />
+        <Experience />
         <Skills />
         <SoftSkills />
         <Projects />
