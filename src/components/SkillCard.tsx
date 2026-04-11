@@ -38,7 +38,7 @@ export const SkillCard = ({ category, items }: Props) => {
                     {items.map((item) => (
                         <span
                             key={item}
-                            className={`badge rounded-pill bg-black px-3 py-2 d-flex align-items-center gap-2`}
+                            className={`badge rounded-pill bg-dark px-3 py-2 d-flex align-items-center gap-2`}
                             style={{ fontSize: '1rem' }}
                         >
                             {skillIcons[item] && <span>{skillIcons[item]}</span>}
