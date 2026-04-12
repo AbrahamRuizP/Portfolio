@@ -113,6 +113,15 @@ code {
   background: var(--code-bg);
 }
 
+.experience-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  padding-left: 20px;
+}
+
 /* Hover animación de tarjetas */
 .skill-card {
   background: rgba(255, 255, 255, 0.02);
