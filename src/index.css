@@ -122,6 +122,16 @@ code {
   padding-left: 20px;
 }
 
+.experience-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.experience-list {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
 /* Hover animación de tarjetas */
 .skill-card {
   background: rgba(255, 255, 255, 0.02);
